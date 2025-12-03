@@ -1,0 +1,469 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "alina",
+      "password": "123456",
+      "name": "Alina"
+    },
+    {
+      "id": "2",
+      "username": "ilia",
+      "password": "123456",
+      "name": "Ilia"
+    },
+    {
+      "id": "3",
+      "username": "maria",
+      "password": "123456",
+      "name": "Maria"
+    },
+    {
+      "id": "4",
+      "username": "dmitry",
+      "password": "123456",
+      "name": "Dmitry"
+    },
+    {
+      "id": "5",
+      "username": "sergey",
+      "password": "123456",
+      "name": "Sergey"
+    },
+    {
+      "id": "6",
+      "username": "olga",
+      "password": "123456",
+      "name": "Olga"
+    },
+    {
+      "id": "7",
+      "username": "nikita",
+      "password": "123456",
+      "name": "Nikita"
+    },
+    {
+      "id": "8",
+      "username": "anna",
+      "password": "123456",
+      "name": "Anna"
+    },
+    {
+      "id": "9",
+      "username": "vlad",
+      "password": "123456",
+      "name": "Vlad"
+    },
+    {
+      "id": "10",
+      "username": "ekaterina",
+      "password": "123456",
+      "name": "Ekaterina"
+    }
+  ],
+  "chats": [
+    {
+      "id": "sfjvs",
+      "user1": "1",
+      "user2": "2"
+    },
+    {
+      "id": "akd93",
+      "user1": "1",
+      "user2": "3"
+    },
+    {
+      "id": "plm28",
+      "user1": "1",
+      "user2": "4"
+    },
+    {
+      "id": "zqx91",
+      "user1": "1",
+      "user2": "5"
+    },
+    {
+      "user1": "1",
+      "user2": "2",
+      "id": "OyInXXL"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "from": "1",
+      "to": "2",
+      "text": "Hey, just got home 👋",
+      "createdAt": 1740657600,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "2",
+      "from": "2",
+      "to": "1",
+      "text": "Nice! How's your project going?",
+      "createdAt": 1740657780,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "3",
+      "from": "1",
+      "to": "2",
+      "text": "Getting better, still a long way to go 😅",
+      "createdAt": 1740657960,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "4",
+      "from": "2",
+      "to": "1",
+      "text": "I feel you. Wanna grab coffee sometime?",
+      "createdAt": 1740658140,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "5",
+      "from": "1",
+      "to": "2",
+      "text": "That sounds great! How about Saturday?",
+      "createdAt": 1740658320,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "6",
+      "from": "2",
+      "to": "1",
+      "text": "Saturday works for me 👍",
+      "createdAt": 1740658500,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "7",
+      "from": "1",
+      "to": "2",
+      "text": "Cool, I'll text you in the morning.",
+      "createdAt": 1740658680,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "8",
+      "from": "2",
+      "to": "1",
+      "text": "So how do you usually relax?",
+      "createdAt": 1740658860,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "9",
+      "from": "1",
+      "to": "2",
+      "text": "Probably going to watch a movie this weekend 🎬",
+      "createdAt": 1740659040,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "10",
+      "from": "2",
+      "to": "1",
+      "text": "Nice, any ideas on what to watch?",
+      "createdAt": 1740659220,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "11",
+      "from": "1",
+      "to": "2",
+      "text": "Not really, open to suggestions.",
+      "createdAt": 1740659400,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "12",
+      "from": "2",
+      "to": "1",
+      "text": "I’m always with my laptop and coffee 😄",
+      "createdAt": 1740659580,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "13",
+      "from": "1",
+      "to": "2",
+      "text": "We could meet at 3 pm Saturday?",
+      "createdAt": 1740659760,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "14",
+      "from": "2",
+      "to": "1",
+      "text": "Sounds like a plan! How was your day?",
+      "createdAt": 1740659940,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "15",
+      "from": "1",
+      "to": "2",
+      "text": "Worked a bit, hit the gym 💪",
+      "createdAt": 1740660120,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "16",
+      "from": "2",
+      "to": "1",
+      "text": "Nice! I just opened my laptop 😅",
+      "createdAt": 1740660300,
+      "chatId": "sfjvs"
+    },
+    {
+      "id": "17",
+      "from": "1",
+      "to": "3",
+      "text": "Congrats on the release! 🎉",
+      "createdAt": 1740660480,
+      "chatId": "akd93"
+    },
+    {
+      "id": "18",
+      "from": "3",
+      "to": "1",
+      "text": "Thanks! We were testing all day 😪",
+      "createdAt": 1740660660,
+      "chatId": "akd93"
+    },
+    {
+      "id": "19",
+      "from": "1",
+      "to": "3",
+      "text": "That must’ve been intense. Any weekend plans?",
+      "createdAt": 1740660840,
+      "chatId": "akd93"
+    },
+    {
+      "id": "20",
+      "from": "3",
+      "to": "1",
+      "text": "Thinking about going hiking 🌲",
+      "createdAt": 1740661020,
+      "chatId": "akd93"
+    },
+    {
+      "id": "21",
+      "from": "1",
+      "to": "3",
+      "text": "Nice, you definitely earned a break!",
+      "createdAt": 1740661200,
+      "chatId": "akd93"
+    },
+    {
+      "id": "22",
+      "from": "3",
+      "to": "1",
+      "text": "So did you! How’s your project?",
+      "createdAt": 1740661380,
+      "chatId": "akd93"
+    },
+    {
+      "id": "23",
+      "from": "1",
+      "to": "3",
+      "text": "Trying to meet the deadline 🔥",
+      "createdAt": 1740661560,
+      "chatId": "akd93"
+    },
+    {
+      "id": "24",
+      "from": "3",
+      "to": "1",
+      "text": "Hang in there, you got this!",
+      "createdAt": 1740661740,
+      "chatId": "akd93"
+    },
+    {
+      "id": "25",
+      "from": "1",
+      "to": "3",
+      "text": "After that I’m binge-watching something 😄",
+      "createdAt": 1740661920,
+      "chatId": "akd93"
+    },
+    {
+      "id": "26",
+      "from": "3",
+      "to": "1",
+      "text": "Same here, coffee and VS Code all weekend 😅",
+      "createdAt": 1740662100,
+      "chatId": "akd93"
+    },
+    {
+      "id": "27",
+      "from": "1",
+      "to": "3",
+      "text": "What show are you watching?",
+      "createdAt": 1740662280,
+      "chatId": "akd93"
+    },
+    {
+      "id": "28",
+      "from": "3",
+      "to": "1",
+      "text": "Started a new series, I'm hooked 😆",
+      "createdAt": 1740662460,
+      "chatId": "akd93"
+    },
+    {
+      "id": "29",
+      "from": "1",
+      "to": "3",
+      "text": "Send me the name later, I'm looking for something",
+      "createdAt": 1740662640,
+      "chatId": "akd93"
+    },
+    {
+      "id": "30",
+      "from": "3",
+      "to": "1",
+      "text": "Will do, can't remember right now 😅",
+      "createdAt": 1740662820,
+      "chatId": "akd93"
+    },
+    {
+      "id": "31",
+      "from": "1",
+      "to": "3",
+      "text": "Looks like we're living the same life 😂",
+      "createdAt": 1740663000,
+      "chatId": "akd93"
+    },
+    {
+      "id": "32",
+      "from": "3",
+      "to": "1",
+      "text": "We definitely need a vacation 😅",
+      "createdAt": 1740663180,
+      "chatId": "akd93"
+    },
+    {
+      "id": "33",
+      "from": "1",
+      "to": "3",
+      "text": "Just got back from the gym",
+      "createdAt": 1740663360,
+      "chatId": "akd93"
+    },
+    {
+      "id": "34",
+      "from": "3",
+      "to": "1",
+      "text": "Nice! You're gonna be ripped soon 💪",
+      "createdAt": 1740663540,
+      "chatId": "akd93"
+    },
+    {
+      "id": "35",
+      "from": "1",
+      "to": "3",
+      "text": "Haha, let's hope so 😅",
+      "createdAt": 1740663720,
+      "chatId": "akd93"
+    },
+    {
+      "id": "36",
+      "from": "3",
+      "to": "1",
+      "text": "Wanna hit the gym together sometime?",
+      "createdAt": 1740663900,
+      "chatId": "akd93"
+    },
+    {
+      "id": "37",
+      "from": "1",
+      "to": "3",
+      "text": "Yeah! Sunday maybe?",
+      "createdAt": 1740664080,
+      "chatId": "akd93"
+    },
+    {
+      "id": "38",
+      "from": "3",
+      "to": "1",
+      "text": "Sunday midday works 🙌",
+      "createdAt": 1740664260,
+      "chatId": "akd93"
+    },
+    {
+      "id": "39",
+      "from": "1",
+      "to": "4",
+      "text": "Hey! How's it going?",
+      "createdAt": 1740664440,
+      "chatId": "plm28"
+    },
+    {
+      "id": "40",
+      "from": "4",
+      "to": "1",
+      "text": "Hey! All good, just got home.",
+      "createdAt": 1740664620,
+      "chatId": "plm28"
+    },
+    {
+      "id": "41",
+      "from": "1",
+      "to": "4",
+      "text": "Got plans for the weekend?",
+      "createdAt": 1740664800,
+      "chatId": "plm28"
+    },
+    {
+      "id": "42",
+      "from": "4",
+      "to": "1",
+      "text": "Just hoping to wrap up the project and chill 😴",
+      "createdAt": 1740664980,
+      "chatId": "plm28"
+    },
+    {
+      "id": "43",
+      "from": "1",
+      "to": "4",
+      "text": "Same here, coding all day long",
+      "createdAt": 1740665160,
+      "chatId": "plm28"
+    },
+    {
+      "id": "44",
+      "from": "4",
+      "to": "1",
+      "text": "Do you even take breaks? 😄",
+      "createdAt": 1740665340,
+      "chatId": "plm28"
+    },
+    {
+      "id": "45",
+      "from": "1",
+      "to": "4",
+      "text": "I try to... but it’s tough 😂",
+      "createdAt": 1740665520,
+      "chatId": "plm28"
+    },
+    {
+      "id": "46",
+      "from": "4",
+      "to": "1",
+      "text": "We should plan a proper break soon!",
+      "createdAt": 1740665700,
+      "chatId": "plm28"
+    },
+    {
+      "from": "1",
+      "to": "2",
+      "text": "nice",
+      "createdAt": 1763492953867,
+      "chatId": "sfjvs",
+      "id": "95AqfPH"
+    }
+  ]
+}
