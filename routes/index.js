@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const fs = require("fs").promises;
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+const DB_PATH = "./data/db.json";
+
+async function readDB() {
+  const data = await fs.readFile(DB_PATH, "utf8");
+  return JSON.parse(data);
+}
+
+router.get("/", async (req, res) => {
+  const db = await readDB();
+  res.render("index", {
+    title: "Users list",
+    users: db.users
+  });
 });
 
 module.exports = router;
