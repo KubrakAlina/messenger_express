@@ -1,4 +1,4 @@
-const { readDB, writeDB } = require("../models/db.js");
+const { readDB } = require("../models/db.js");
 
 async function getAllUsers() {
   const db = await readDB();
