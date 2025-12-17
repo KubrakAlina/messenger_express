@@ -1,0 +1,93 @@
+  /user/getAll:
+    get:
+      summary: Retrieve a list of users
+      responses:
+        200:
+          description: A list of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 1
+                    name:
+                      type: string
+                      example: John Doe
+
+  /user/{username}:
+    get:
+      summary: Retrieve a user by username
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: alina
+      responses:
+        200:
+          description: A user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "1"
+                  username:
+                    type: string
+                    example: alina
+                  name:
+                    type: string
+                    example: Alina
+        404:
+          description: User not found
+
+  /user/addUser:
+    post:
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+                - username
+                - password
+                - name
+              properties:
+                name:
+                  type: string
+                  example: John Doe
+                password:
+                  type: string
+                  example: 123456
+      responses:
+        201:
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  username:
+                    type: string
+                    example: johndoe
+                  password:
+                    type: string
+                    example: 123456
+                  name:
+                    type: string
+                    example: John Doe
+        400:
+          description: Invalid input

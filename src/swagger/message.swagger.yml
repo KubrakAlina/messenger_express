@@ -1,0 +1,47 @@
+/message/getAll:
+  get:
+    summary: Retrieve a list of messages
+    responses:
+      200:
+        description: A messages
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  text:
+                    type: string
+                    example: Hello
+
+/message/{chat_id}:
+  get:
+    summary: Retrieve a messages by chat id
+    parameters:
+      - in: path
+        name: chat_id
+        required: true
+        schema:
+          type: string
+        example: hbihnli
+    responses:
+      200:
+        description: A messages
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                  id:
+                    type: string
+                    example: 1
+                  text:
+                    type: string
+                    example: Hello
+      404:
+        description: Chat not found
+
