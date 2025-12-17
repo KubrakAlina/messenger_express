@@ -49,7 +49,54 @@ const userController = require("../controllers/user.controller");
  *                     example: John Doe
  */
 
+/**
+ * @swagger
+ * /user/addUser:
+ *   post:
+ *     summary: Create a new user
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - id
+ *               - username
+ *               - password
+ *               - name
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: John Doe
+  *               password:
+ *                 type: string
+ *                 example: 123456
+ *     responses:
+ *       201:
+ *         description: User created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id:
+ *                   type: string
+ *                   example: 1
+ *                 username:
+ *                   type: string
+ *                   example: johndoe
+ *                 password:
+ *                   type: string
+ *                   example: 123456
+ *                 name:
+ *                   type: string
+ *                   example: John Doe
+ *       400:
+ *         description: Invalid input
+ */
+
 router.get("/getAll", userController.getAllUsers);
 router.get("/:username", userController.getUserByName);
-
+router.post("/addUser", userController.addUser);
 module.exports = router;
