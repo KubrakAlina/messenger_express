@@ -17,8 +17,23 @@ async function getChatById(req, res) {
   res.json(chat);
 }
 
+async function postNewChat(req, res) {
+  try {
+    const { id, user1, user2 } = req.body;
+    const newChat = await chatService.addNewChat({
+      id,
+      user1,
+      user2
+    });
+    res.status(201).json(newChat);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllChats,
   getChatByUserId,
-  getChatById
+  getChatById,
+  postNewChat
 };

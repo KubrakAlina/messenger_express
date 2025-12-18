@@ -1,4 +1,4 @@
-const { readDB } = require("../models/db.js");
+const { readDB, writeDB } = require("../models/db.js");
 
 async function getAllChats() {
   const db = await readDB();
@@ -15,8 +15,21 @@ async function findChatById(chat_id) {
   return db.chats.filter((chat) => chat.id === chat_id);
 }
 
+async function addNewChat({ user1, user2 }) {
+  const db = await readDB();
+  const newChat = {
+    id: String(db.chats.length + 1),
+    user1,
+    user2
+  };
+  db.chats.push(newChat);
+  await writeDB(db);
+  return newChat;
+}
+
 module.exports = {
   getAllChats,
   findChatByUserId,
-  findChatById
+  findChatById,
+  addNewChat
 };
