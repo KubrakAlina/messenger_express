@@ -11,7 +11,23 @@ async function getMessageForChat(req, res) {
   res.json(message);
 }
 
+async function sendMessage(req, res) {
+  try {
+    const { from, to, text, chatId } = req.body;
+    const newMessage = await messageService.sendNewMessage({
+      from,
+      to,
+      text,
+      chatId
+    });
+    res.status(201).json(newMessage);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllMessages,
-  getMessageForChat
+  getMessageForChat,
+  sendMessage
 };

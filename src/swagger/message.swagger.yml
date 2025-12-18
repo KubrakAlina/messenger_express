@@ -1,0 +1,104 @@
+/message/getAll:
+  get:
+    summary: Retrieve a list of messages
+    responses:
+      200:
+        description: A messages
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  text:
+                    type: string
+                    example: Hello
+
+/message/{chat_id}:
+  get:
+    summary: Retrieve a messages by chat id
+    parameters:
+      - in: path
+        name: chat_id
+        required: true
+        schema:
+          type: string
+        example: hbihnli
+    responses:
+      200:
+        description: A messages
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                  id:
+                    type: string
+                    example: 1
+                  text:
+                    type: string
+                    example: Hello
+      404:
+        description: Chat not found
+
+/message/send:
+    post:
+      summary: Create a new message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+                - from
+                - to
+                - text
+                - createdAt
+                - chatId
+              properties:
+                from:
+                  type: string
+                  example: 1
+                to:
+                  type: string
+                  example: 2
+                text:
+                  type: string
+                  example: Hello!
+                chatId:
+                  type: string
+                  example: nckjdcs
+      responses:
+        201:
+          description: Message created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  from:
+                    type: string
+                    example: 1
+                  to:
+                    type: string
+                    example: 2
+                  text:
+                    type: string
+                    example: Hello!
+                  createdAt:
+                    type: string
+                    example: 1740658140
+                  chatId:
+                    type: string
+                    example: sfjvs
+        400:
+          description: Invalid input
