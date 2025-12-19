@@ -102,3 +102,41 @@
                     example: sfjvs
         400:
           description: Invalid input
+
+/message/deleteMessage:
+    delete:
+      summary: Delete a message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+              properties:
+                id:
+                  type: string
+                  example: 1
+      responses:
+        201:
+          description: Message deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  from:
+                    type: string
+                    example: 1
+                  to:
+                    type: string
+                    example: 2
+                  text:
+                    type: string
+                    example: "Hello!"
+        400:
+          description: Invalid input
