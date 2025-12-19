@@ -24,9 +24,18 @@ async function addUser({ name, password }) {
   return newUser;
 }
 
+async function deleteUser(user_id) {
+  const db = await readDB();
+  const index = db.users.findIndex(u => u.id === user_id)
+  const deletedUser = db.users[index];
+  db.users.splice(index, 1);
+  await writeDB(db);
+  return deletedUser;
+}
 
 module.exports = {
   getAllUsers,
   findUserByName,
-  addUser
+  addUser,
+  deleteUser
 };

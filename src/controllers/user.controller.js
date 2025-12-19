@@ -26,8 +26,19 @@ async function addUser(req, res) {
   }
 }
 
+async function deleteUser(req, res) {
+  try {
+    const user_id = req.body.id;
+    const deletedUser = await userService.deleteUser(user_id);
+    res.status(200).json(deletedUser);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllUsers,
   getUserByName,
-  addUser
+  addUser,
+  deleteUser
 };
