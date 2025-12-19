@@ -31,9 +31,20 @@ async function postNewChat(req, res) {
   }
 }
 
+async function deleteChat(req, res) {
+  try {
+    const id = req.body.id;
+    const deletedChat = await chatService.deleteChat(id);
+    res.status(201).json(deletedChat);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllChats,
   getChatByUserId,
   getChatById,
-  postNewChat
+  postNewChat,
+  deleteChat
 };
