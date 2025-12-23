@@ -36,9 +36,23 @@ async function deleteUser(req, res) {
   }
 }
 
+async function updateUser(req, res) {
+  try {
+    const id = req.body.id;
+    const newUserName = req.body.username;
+    const newPassword = req.body.password;
+    const newName = req.body.name;
+    const updatedUser = await userService.updateUser(id, newUserName, newPassword, newName);
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    res.status(400 || 404).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllUsers,
   getUserByName,
   addUser,
-  deleteUser
+  deleteUser,
+  updateUser
 };
