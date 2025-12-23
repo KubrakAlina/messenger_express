@@ -35,9 +35,19 @@ async function deleteMessage(message_id) {
   return deletedMessage;
 }
 
+async function changeMessage(id, text) {
+  const db = await readDB();
+  const index = db.messages.findIndex(u => u.id === id)
+  const changedMessage = db.messages[index];
+  changedMessage.text = text;
+  await writeDB(db);
+  return changedMessage;
+}
+
 module.exports = {
   getAllMessages,
   findMessagesForChat,
   sendNewMessage,
-  deleteMessage
+  deleteMessage,
+  changeMessage
 };

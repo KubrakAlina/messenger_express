@@ -6,6 +6,7 @@ const messageController = require("../controllers/message.controller");
 router.get("/getAll", messageController.getAllMessages);
 router.get("/:chat_id", messageController.getMessageForChat);
 router.post("/send", messageController.sendMessage);
-router.delete("/deleteMessage", messageController.deleteMessage)
+router.delete("/deleteMessage", messageController.deleteMessage);
+router.patch("/updateMessage", messageController.updateMessage)
 
 module.exports = router;

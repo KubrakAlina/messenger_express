@@ -36,9 +36,21 @@ async function deleteMessage(req, res) {
   }
 }
 
+async function updateMessage(req, res) {
+  try {
+    const messageId = req.body.id;
+    const newText = req.body.text;
+    const changedMessage = await messageService.changeMessage(messageId, newText);
+    res.status(200).json(changedMessage);
+  } catch (err) {
+    res.status(400 || 404).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllMessages,
   getMessageForChat,
   sendMessage,
-  deleteMessage
+  deleteMessage,
+  updateMessage
 };

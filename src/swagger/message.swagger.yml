@@ -140,3 +140,47 @@
                     example: "Hello!"
         400:
           description: Invalid input
+
+/message/updateMessage:
+  patch:
+    summary: Update message text
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - id
+              - text
+            properties:
+              id:
+                type: string
+                example: "1"
+              text:
+                type: string
+                example: "Updated message text"
+    responses:
+      200:
+        description: Message updated successfully
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  example: "1"
+                from:
+                  type: string
+                  example: "1"
+                to:
+                  type: string
+                  example: "2"
+                text:
+                  type: string
+                  example: "Updated message text"
+      400:
+        description: Invalid input
+      404:
+        description: Message not found
