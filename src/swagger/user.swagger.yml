@@ -91,3 +91,87 @@
                     example: John Doe
         400:
           description: Invalid input
+
+  /user/deleteUser:
+    delete:
+      summary: Delete a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+              properties:
+                id:
+                  type: string
+                  example: 1
+      responses:
+        201:
+          description: User deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  username:
+                    type: string
+                    example: johndoe
+                  password:
+                    type: string
+                    example: 123456
+                  name:
+                    type: string
+                    example: John Doe
+        400:
+          description: Invalid input
+
+  /user/updateUser:
+    patch:
+      summary: Update user information
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+              properties:
+                id:
+                  type: string
+                  example: "1"
+                username:
+                  type: string
+                  example: "newname"
+                password:
+                  type: string
+                  example: "newPassword"
+                name:
+                  type: string
+                  example: "New Name"
+      responses:
+        200:
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "1"
+                  name:
+                    type: string
+                    example: "New Name"
+                  password:
+                    type: string
+                    example: newPassword
+        400:
+          description: Invalid input
+        404:
+          description: User not found

@@ -26,8 +26,28 @@ async function sendNewMessage({ from, to, text, chatId }) {
 
 }
 
+async function deleteMessage(message_id) {
+  const db = await readDB();
+  const index = db.messages.findIndex(u => u.id === message_id)
+  const deletedMessage = db.messages[index];
+  db.messages.splice(index, 1);
+  await writeDB(db);
+  return deletedMessage;
+}
+
+async function changeMessage(id, text) {
+  const db = await readDB();
+  const index = db.messages.findIndex(u => u.id === id)
+  const changedMessage = db.messages[index];
+  changedMessage.text = text;
+  await writeDB(db);
+  return changedMessage;
+}
+
 module.exports = {
   getAllMessages,
   findMessagesForChat,
-  sendNewMessage
+  sendNewMessage,
+  deleteMessage,
+  changeMessage
 };

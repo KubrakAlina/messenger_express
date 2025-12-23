@@ -27,9 +27,19 @@ async function addNewChat({ user1, user2 }) {
   return newChat;
 }
 
+async function deleteChat(chat_id) {
+  const db = await readDB();
+  const index = db.chats.findIndex(u => u.id === chat_id)
+  const deletedChat = db.chats[index];
+  db.chats.splice(index, 1);
+  await writeDB(db);
+  return deletedChat;
+}
+
 module.exports = {
   getAllChats,
   findChatByUserId,
   findChatById,
-  addNewChat
+  addNewChat,
+  deleteChat
 };

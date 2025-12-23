@@ -106,3 +106,37 @@
           400:
             description: Invalid input
 
+  /chat/deleteChat:
+    delete:
+      summary: Delete a chat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - id
+              properties:
+                id:
+                  type: string
+                  example: 1
+      responses:
+        201:
+          description: Chat deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  user1:
+                    type: string
+                    example: 1
+                  user2:
+                    type: string
+                    example: 2
+        400:
+          description: Invalid input

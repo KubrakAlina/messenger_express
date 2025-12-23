@@ -26,8 +26,31 @@ async function sendMessage(req, res) {
   }
 }
 
+async function deleteMessage(req, res) {
+  try {
+    const message_id = req.body.id;
+    const deletedMessage = await messageService.deleteMessage(message_id);
+    res.status(201).json(deletedMessage);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
+async function updateMessage(req, res) {
+  try {
+    const messageId = req.body.id;
+    const newText = req.body.text;
+    const changedMessage = await messageService.changeMessage(messageId, newText);
+    res.status(200).json(changedMessage);
+  } catch (err) {
+    res.status(400 || 404).json({ message: err.message });
+  }
+}
+
 module.exports = {
   getAllMessages,
   getMessageForChat,
-  sendMessage
+  sendMessage,
+  deleteMessage,
+  updateMessage
 };
